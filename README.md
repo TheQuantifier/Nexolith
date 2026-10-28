@@ -69,6 +69,10 @@ The planned project website is [nexolith.thequantifier.com](https://nexolith.the
 
 The most useful contributions today are design critiques, benchmark proposals, workload definitions, prior-art references, and small experiments tied to the first milestone. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a proposal.
 
+### AI-assisted development
+
+Nexolith permits AI-assisted development and may contain AI-assisted code and documentation. Every contribution remains under human responsibility and must meet the same review, testing, security, licensing, and maintainability requirements regardless of the tools used. Individual contributors are not publicly labeled according to their use of AI. See the [AI-Assisted Contribution Policy](AI_CONTRIBUTION_POLICY.md) for the complete requirements.
+
 ## License
 
 Nexolith is licensed under the [Apache License 2.0](LICENSE). This includes an explicit patent grant; see the license text for the complete terms.

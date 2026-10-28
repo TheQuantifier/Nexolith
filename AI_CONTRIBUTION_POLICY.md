@@ -48,11 +48,20 @@ Contributors who submit code must maintain a private AI-use profile with the pro
 
 Completed profiles are confidential. Access is limited to the Project Lead and specifically designated moderation administrators. Profiles are not available to reviewers and must not be used to prejudice technical review.
 
+Private profile information may be used only to:
+
+- administer and enforce this policy;
+- produce anonymous, project-wide aggregate information that cannot identify individual contributors;
+- investigate a substantiated licensing, security, or policy-compliance concern;
+- satisfy an applicable external platform, license, contract, or legal requirement while disclosing no more information than required.
+
+Private categories must never be used as hidden reviewer signals, contributor rankings, measures of ability, or grounds for different technical-review standards.
+
 A contributor may update their category whenever their practices change. The updated category applies from its recorded effective date. Active code contributors will be asked to confirm or update their category monthly. Code submitted during an effective period must be consistent with the category recorded for that period.
 
 An accidental inconsistency should be corrected promptly through a private update. Deliberately providing false information or repeatedly disregarding the profile requirement may result in contribution restrictions.
 
-The project will collect no additional information about a contributor’s AI usage unless reasonably necessary to investigate a specific policy, licensing, or security concern. Anonymous aggregate information may be published only when it cannot identify individual contributors.
+The project will collect no additional information about a contributor’s AI usage unless reasonably necessary for one of the permitted purposes above. Anonymous aggregate information may be published only when it cannot identify individual contributors.
 
 The public [AI-use profile template](docs/AI_USE_PROFILE_FORM.md) explains the four categories. **Do not submit a completed profile in a public issue, discussion, pull request, or repository file.** The Project Lead will designate a private submission method before code contributions are accepted.
 
