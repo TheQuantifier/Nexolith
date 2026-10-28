@@ -5,10 +5,11 @@ Thank you for helping shape Nexolith. The project is currently at the concept an
 ## Before contributing
 
 1. Read the [vision](VISION.md), [architecture](ARCHITECTURE.md), and [roadmap](ROADMAP.md).
-2. Search existing issues and discussions before opening a new topic.
-3. Use a discussion for early design exploration and an issue for defined, actionable work.
-4. Keep proposals tied to evidence, user value, or a roadmap question.
-5. Follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+2. Read the [AI-Assisted Contribution Policy](AI_CONTRIBUTION_POLICY.md). AI-assisted work is welcome, and all contributors remain responsible for understanding and supporting their submissions.
+3. Search existing issues and discussions before opening a new topic.
+4. Use a discussion for early design exploration and an issue for defined, actionable work.
+5. Keep proposals tied to evidence, user value, or a roadmap question.
+6. Follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Current contribution priorities
 
@@ -43,6 +44,8 @@ Keep pull requests focused and include:
 - before/after results with environment details for performance claims;
 - documentation for changed contracts or formats;
 - any known limitations or follow-up work.
+
+Code contributors must maintain the private AI-use profile required by the [AI-Assisted Contribution Policy](AI_CONTRIBUTION_POLICY.md). Never submit a completed profile publicly. The public [profile template](docs/AI_USE_PROFILE_FORM.md) describes the categories and acknowledgement; the Project Lead will designate the private submission method before code contributions are accepted.
 
 Performance changes must report distributions or percentiles, not just a single average. Results should identify the commit, hardware, operating system, runtime, build mode, dataset, cache state, and sample count.
 

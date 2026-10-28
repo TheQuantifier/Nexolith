@@ -57,6 +57,7 @@ A successful prototype includes a documented format, deterministic test data, a 
 - [Architecture](ARCHITECTURE.md)
 - [Roadmap](ROADMAP.md)
 - [Contributing](CONTRIBUTING.md)
+- [AI-assisted contribution policy](AI_CONTRIBUTION_POLICY.md)
 - [Community discussions](DISCUSSIONS.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
 

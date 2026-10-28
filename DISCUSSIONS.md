@@ -18,6 +18,7 @@ GitHub Discussions should be the project's front door for questions and ideas th
 - Distinguish observed facts, measurements, assumptions, and preferences.
 - Include reproducible details for technical claims.
 - Avoid presenting planned features as implemented or promised.
+- Follow the [AI-Assisted Contribution Policy](AI_CONTRIBUTION_POLICY.md) when discussing AI tools or reviewing AI-assisted work. Keep criticism focused on evidence and project impact, not assumptions about contributors.
 
 ## Moving from discussion to issue
 
