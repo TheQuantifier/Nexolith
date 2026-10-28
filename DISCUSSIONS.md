@@ -1,6 +1,10 @@
 # Discussion guidelines
 
-GitHub Discussions should be the project's front door for questions and ideas that are not yet actionable work. Discussions are not enabled automatically by the files in this repository; a maintainer must enable the feature in repository settings.
+GitHub Discussions is the project's front door for questions and ideas that are not yet actionable work.
+
+## Start here
+
+New to Nexolith? Visit [Welcome to Nexolith — Introduce yourself](https://github.com/TheQuantifier/Nexolith/discussions/1) to meet the community and share your interests, experience, possible contributions, or hopes for the project. Coding experience and a commitment to contribute are not required.
 
 ## Suggested categories
 
