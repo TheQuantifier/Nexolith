@@ -1,0 +1,29 @@
+# Build outputs
+build/
+dist/
+out/
+target/
+
+# Tool and editor state
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.user
+*.suo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Benchmark artifacts (publish curated results deliberately)
+benchmark-results/local/
+*.trace
+*.prof
+
+# OS files
+.DS_Store
+Thumbs.db
+

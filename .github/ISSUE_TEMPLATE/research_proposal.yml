@@ -1,0 +1,34 @@
+name: Research or benchmark proposal
+description: Propose an experiment that can inform an architectural decision.
+title: "[Research]: "
+labels: [research, needs-triage]
+body:
+  - type: textarea
+    attributes:
+      label: Question
+      description: State one decision-relevant question the experiment should answer.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Hypothesis and falsification
+      description: What do you expect, and what result would change your mind?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Method
+      description: Define workloads, baselines, controls, metrics, sample counts, and environment metadata.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected artifacts
+      description: Code, raw results, charts, ADR, or other reproducible outputs.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Risks and confounders
+      description: Identify likely sources of bias, invalid comparisons, or misleading conclusions.
+

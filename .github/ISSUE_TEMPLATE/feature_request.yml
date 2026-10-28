@@ -1,0 +1,53 @@
+name: Feature request
+description: Propose a bounded improvement connected to the roadmap.
+title: "[Feature]: "
+labels: [enhancement, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: Early or broad ideas belong in Discussions. Use this form when the problem and scope are ready for actionable work.
+  - type: checkboxes
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues and discussions.
+          required: true
+        - label: I have separated current behavior from planned behavior.
+          required: true
+  - type: textarea
+    attributes:
+      label: Problem
+      description: What problem does this solve, and for whom?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed outcome
+      description: Describe the observable result without over-prescribing implementation.
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Roadmap area
+      options:
+        - Milestone 1 — cubic storage/loading prototype
+        - Streaming world service
+        - Parallel simulation
+        - Rendering or networking
+        - Native mod platform
+        - World intelligence
+        - Legacy bridge exploration
+        - Documentation or community
+        - Not yet mapped
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Acceptance evidence
+      description: What test, benchmark, or review would show that this is successful?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Alternatives and trade-offs
+
