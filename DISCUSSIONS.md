@@ -12,6 +12,7 @@ New to Nexolith? Visit [Welcome to Nexolith — Introduce yourself](https://gith
 - **Q&A** — questions with answers that can help future contributors.
 - **Ideas** — product and gameplay possibilities before they become proposals.
 - **Architecture and RFCs** — technical designs, trade-offs, and requests for comment.
+- **Runtime and upstream integration** — authorized bootstrap, patching, Minecraft-version support, and replaceable platform boundaries.
 - **Benchmarks and research** — workloads, results, prior art, and methodology.
 - **Show and tell** — experiments, visualizations, and related modding work.
 
@@ -22,6 +23,9 @@ New to Nexolith? Visit [Welcome to Nexolith — Introduce yourself](https://gith
 - Distinguish observed facts, measurements, assumptions, and preferences.
 - Include reproducible details for technical claims.
 - Avoid presenting planned features as implemented or promised.
+- State whether a proposal belongs to the native cubic runtime, the temporary NeoForge bootstrap, or an optional compatibility layer.
+- Do not propose mandatory feature mods as substitutes for built-in runtime systems.
+- Do not post Minecraft code, decompiled sources, game files, assets, or completed patched JARs.
 - Follow the [AI-Assisted Contribution Policy](AI_CONTRIBUTION_POLICY.md) when discussing AI tools or reviewing AI-assisted work. Keep criticism focused on evidence and project impact, not assumptions about contributors.
 
 ## Moving from discussion to issue
