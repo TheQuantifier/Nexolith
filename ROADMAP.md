@@ -4,7 +4,7 @@ This roadmap communicates sequence, not delivery dates. Everything below is plan
 
 ## Phase 0 — Runtime identity and foundations
 
-**Current phase: architecture documented; implementation not started.**
+**Current phase: Phase 1 loader, runtime transformation, and native cube foundation complete; the first cube-backed Minecraft integration seam is next.**
 
 - [x] State the initial vision and product principles.
 - [x] Select the Apache License 2.0 for original Nexolith work.
@@ -12,10 +12,11 @@ This roadmap communicates sequence, not delivery dates. Everything below is plan
 - [x] Establish the authoritative native cubic world model.
 - [x] Limit column-shaped access to an isolated compatibility facade.
 - [x] Select Java as the implementation language direction.
-- [x] Define NeoForge as replaceable incubation infrastructure rather than the native platform contract.
+- [x] Select a vanilla-first architecture with an original Nexolith loader.
+- [x] Limit NeoForge to reference material and separately reviewed optional components.
 - [x] Record the initial architecture decisions.
-- [ ] Choose one exact Minecraft target version and its required JDK.
-- [ ] Select and document the initial NeoForge/NeoForm development pipeline.
+- [x] Select Minecraft Java Edition 26.3 and Java 25 as the initial runtime target.
+- [x] Select NeoForm as local vanilla reconstruction tooling rather than a host loader.
 - [ ] Review upstream licenses, patch formats, redistribution boundaries, and required notices.
 - [ ] Add defensive ignore rules and artifact checks for generated Minecraft files.
 - [ ] Define representative datasets and benchmark methodology.
@@ -24,12 +25,19 @@ This roadmap communicates sequence, not delivery dates. Everything below is plan
 
 Goal: prove that Nexolith can construct and launch a development runtime locally without publishing Minecraft files.
 
-- [ ] Locate an existing authorized launcher installation or download the selected version through authorized metadata.
+- [x] Implement an original Apache-licensed Nexolith bootstrap with no NeoForge dependency.
+- [x] Initialize a Nexolith-controlled lifecycle before delegating to a launcher-provided game main class.
+- [x] Add automated bootstrap delegation tests and a reproducible Gradle wrapper.
+- [x] Locate an existing Prism Launcher installation and generate a separate Nexolith instance.
+- [x] Add the loader as an instance-local library and select the Nexolith bootstrap as the launch main class.
 - [ ] Verify input metadata and hashes.
 - [ ] Generate an ignored local development workspace.
-- [ ] Apply a minimal Nexolith patch that produces a visible development marker or diagnostic.
-- [ ] Launch a distinct Nexolith development profile.
-- [ ] Generate the permitted patch or transformation artifacts needed to reproduce the change.
+- [x] Apply a minimal Nexolith runtime transformation that produces a visible development marker.
+- [x] Launch a distinct Nexolith development profile through the original Nexolith bootstrap and reach the Minecraft 26.3 main menu.
+- [x] Implement and exhaustively test native three-dimensional cube coordinates and local indexing.
+- [x] Install a Nexolith-owned runtime transformer before Minecraft classes load.
+- [x] Visibly transform Minecraft 26.3 and verify the branded main-menu window.
+- [x] Generate the permitted transformation artifact needed to reproduce the change.
 - [ ] Reconstruct the same result from a clean checkout.
 - [ ] Verify that source control and release artifacts contain no vanilla or completed patched Minecraft JARs, generated source trees, or Minecraft assets.
 
@@ -38,7 +46,7 @@ Exit criteria:
 - a contributor with an authorized Minecraft installation can reproduce the development launch;
 - upstream inputs and generated outputs remain outside version control;
 - the patch is minimal, reviewable, and attributable;
-- the temporary NeoForge boundary is isolated from reusable Nexolith modules; and
+- the loader and reusable Nexolith modules have no required NeoForge dependency; and
 - the build reports actionable errors for missing or mismatched upstream versions.
 
 ## Milestone 1 — Benchmarkable cubic storage/loading prototype
@@ -135,12 +143,13 @@ Alpha exit criteria:
 - [ ] Define packaging and isolation expectations.
 - [ ] Ensure the cubic runtime initializes before all user mods.
 
-## Milestone 7 — Independent Nexolith bootstrap
+## Milestone 7 — Loader, installer, and lifecycle hardening
 
-- [ ] Inventory every remaining NeoForge bootstrap dependency.
-- [ ] Replace mod discovery, lifecycle, launch, and installation responsibilities with original Nexolith components where justified.
+- [x] Establish an original Nexolith bootstrap with no NeoForge dependency.
+- [ ] Replace the experimental extension SPI with a versioned native discovery and lifecycle contract.
+- [ ] Harden profile installation, version verification, recovery, and uninstall behavior.
 - [ ] Preserve the native API, cubic runtime, storage, and world formats across the transition.
-- [ ] Remove the temporary platform module without rewriting the core.
+- [ ] Confirm that every runtime dependency has an intentional role and compatible distribution license.
 - [ ] Review release artifacts and licensing obligations again before publication.
 
 ## Milestone 8 — Adaptive world-intelligence research

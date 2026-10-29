@@ -69,7 +69,7 @@ An optional bridge for selected legacy access patterns or mods may be investigat
 
 ### Replaceable incubation infrastructure
 
-NeoForge and NeoForm tooling may initially provide development workspaces, launch support, patch generation, and a temporary bootstrap. Nexolith's API, cubic runtime, storage, lifecycle, and data formats must remain separate so that an independent Nexolith loader can replace the temporary platform layer later.
+NeoForm may provide the local machinery that reconstructs authorized vanilla Minecraft inputs and produces a recompilable development workspace. Nexolith owns its loader, patch series, runtime lifecycle, storage, API, and data formats from the beginning. NeoForge is reference material and a possible source of separately reviewed, suitably licensed components—not Nexolith's host loader or runtime foundation.
 
 ## Product principles
 

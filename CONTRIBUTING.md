@@ -1,6 +1,6 @@
 # Contributing to Nexolith
 
-Thank you for helping shape Nexolith. The project is currently at the concept and research stage. It has no loader, patches, cubic backend, or playable build, so precise questions, counterexamples, licensing research, benchmark designs, and narrowly scoped experiments are especially valuable.
+Thank you for helping shape Nexolith. The project is in early implementation. It has an original loader bootstrap but no launcher installer, Minecraft patches, cubic backend, or playable build, so precise questions, counterexamples, licensing research, benchmark designs, and narrowly scoped experiments are especially valuable.
 
 ## Before contributing
 
@@ -10,7 +10,7 @@ Thank you for helping shape Nexolith. The project is currently at the concept an
 4. Use a discussion for early design exploration and an issue for defined, actionable work.
 5. Keep proposals tied to evidence, user value, or a roadmap question.
 6. Follow the [Code of Conduct](CODE_OF_CONDUCT.md).
-7. Read the accepted [architecture decisions](docs/adr/README.md), especially the runtime, cubic-authority, and NeoForge-boundary decisions.
+7. Read the accepted [architecture decisions](docs/adr/README.md), especially the runtime, cubic-authority, and vanilla-first loader decisions.
 
 ## Current contribution priorities
 
@@ -24,7 +24,7 @@ Thank you for helping shape Nexolith. The project is currently at the concept an
 - upstream tooling and prior art with clear lessons and licensing notes;
 - documentation corrections and clearer terminology.
 
-Please avoid large implementation pull requests until the initial Minecraft target, required JDK, upstream development pipeline, licensing boundaries, and first bootstrap experiment have been agreed.
+Please avoid large implementation pull requests until the relevant milestone boundaries, upstream licensing constraints, and acceptance tests have been agreed.
 
 ## Proposals
 

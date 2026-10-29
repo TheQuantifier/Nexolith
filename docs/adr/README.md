@@ -13,8 +13,13 @@ Architecture decision records (ADRs) capture project choices that affect multipl
 
 - [0001 — Runtime and distribution model](0001-runtime-and-distribution-model.md)
 - [0002 — Native cubic world authority](0002-native-cubic-world-authority.md)
-- [0003 — NeoForge incubation boundary](0003-neoforge-incubation-boundary.md)
 - [0004 — Java implementation direction](0004-java-implementation-direction.md)
+- [0005 — Vanilla-first foundation and original loader](0005-vanilla-first-original-loader.md)
+- [0006 — Phase 1 runtime transformation](0006-phase-1-runtime-transformation.md)
+
+## Superseded decisions
+
+- [0003 — NeoForge incubation boundary](0003-neoforge-incubation-boundary.md), superseded in part by ADR 0005
 
 ## Template
 

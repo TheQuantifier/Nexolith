@@ -2,9 +2,9 @@
 
 ## Status and scope
 
-This document describes a **proposed architecture**, not implemented software. Nexolith currently contains documentation and an icon, but no loader, patches, runtime, storage backend, or playable profile.
+This document is primarily a **proposed architecture**. Phase 1 now contains an original loader, pre-class-load transformer, tested native cube geometry, and Prism Launcher installer verified at the Minecraft 26.3 main menu. It still has no cube-backed Minecraft storage, lifecycle, generation, lighting, rendering, networking, or simulation.
 
-The accepted direction is a Minecraft Java Edition runtime assembled locally from authorized vanilla files plus Nexolith's original installer, loader, runtime components, and patches. NeoForge may serve as temporary incubation infrastructure, but it must not become the owner of Nexolith's native contracts or backend.
+The accepted direction is a Minecraft Java Edition runtime assembled locally from authorized vanilla files plus Nexolith's original installer, loader, runtime components, and patches. NeoForm may provide local vanilla reconstruction and patch tooling. NeoForge is not the host platform and must not own Nexolith's lifecycle, contracts, or backend.
 
 See the accepted decisions in [`docs/adr`](docs/adr/README.md).
 
@@ -62,7 +62,7 @@ Development caches and generated upstream workspaces must remain ignored and ext
                                  |
                      Patched vanilla foundation
 
-Temporary NeoForge bootstrap -> platform boundary -> Nexolith runtime
+Original Nexolith bootstrap  -> patched vanilla foundation -> Nexolith runtime
 Optional legacy access       -> compatibility facade -> CubeWorld
 ```
 
@@ -82,12 +82,14 @@ minecraft/vanilla-adapter
 minecraft/patches/<version>
 loader/bootstrap
 loader/discovery
+transformer/minecraft-26.3
+installer/prism-profile
 
-platform/neoforge-bootstrap     temporary and replaceable
+tooling/neoform-workspace       local-only generated workspace
 compat/legacy-column            optional and isolated
 ```
 
-Core runtime and API modules must not depend on the NeoForge platform or legacy compatibility modules. Architecture tests should enforce dependency direction once implementation begins.
+Core runtime and API modules must not depend on NeoForge or legacy compatibility modules. Architecture tests should enforce dependency direction as implementation expands.
 
 ## Bootstrap order
 
@@ -172,19 +174,20 @@ The planned API surface includes version negotiation, declared capabilities, lif
 
 Mods execute above the initialized cubic runtime. The runtime itself is not a collection of mandatory mods.
 
-## NeoForge incubation boundary
+## Vanilla-first tooling boundary
 
-NeoForge and NeoForm tooling may initially provide a development workspace, launch support, patch generation, and temporary bootstrap services. Nexolith should use that leverage to reach a running Minecraft environment without treating NeoForge events, registries, capabilities, networking wrappers, or mod discovery as permanent native contracts.
+NeoForm may reconstruct authorized vanilla inputs locally and support a recompilable patch workspace. Generated Minecraft sources and JARs remain ignored local artifacts. Nexolith's committed inputs are its original code, patch data, metadata, and build logic.
 
-The temporary platform module may depend on NeoForge. Reusable runtime, storage, and API modules may not. General NeoForge mod compatibility is not promised.
+The original Nexolith bootstrap runs before vanilla's main class and does not link against NeoForge. NeoForge remains useful as a reference implementation and may contain separately reusable LGPL components, but any adoption requires an explicit design and license review. General NeoForge mod compatibility is not promised.
 
-An independent Nexolith loader can later replace the temporary bootstrap if the core remains isolated. Copied or modified upstream code retains its applicable license; original Nexolith modules do not erase upstream obligations.
+Copied or modified upstream code retains its applicable license; original Nexolith modules do not erase upstream obligations. The experimental loader-extension SPI is not yet the native mod API and may change without compatibility guarantees.
 
 ## First bootstrap milestone
 
 Before backend work begins, a clean checkout should be able to:
 
 - select one exact supported Minecraft version;
+- build and test the original Nexolith bootstrap;
 - obtain or reuse authorized vanilla inputs;
 - verify expected metadata and hashes;
 - generate an ignored local development workspace;
@@ -212,8 +215,8 @@ Every published result should record at least the commit, Minecraft and Nexolith
 
 ## Decisions still open
 
-- initial Minecraft target version and its required JDK;
-- exact NeoForge or NeoForm incubation approach;
+- exact launcher-profile installation format for Minecraft 26.3;
+- exact NeoForm workspace integration and patch format;
 - cube dimensions and region grouping;
 - serialization and compression formats;
 - concurrency model;

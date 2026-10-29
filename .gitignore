@@ -1,8 +1,10 @@
 # Build outputs
+.gradle/
 build/
 dist/
 out/
 target/
+**/build/
 
 # Tool and editor state
 .idea/

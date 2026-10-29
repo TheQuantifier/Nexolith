@@ -1,6 +1,6 @@
 # ADR 0003: NeoForge incubation boundary
 
-- **Status:** Accepted
+- **Status:** Superseded by [ADR 0005](0005-vanilla-first-original-loader.md)
 - **Date:** 2026-10-28
 
 ## Context
@@ -12,6 +12,8 @@ General NeoForge mod compatibility would also create a permanent promise that co
 ## Decision
 
 Nexolith may initially use NeoForge and NeoForm as replaceable incubation infrastructure.
+
+This decision was later narrowed by ADR 0005: NeoForm remains acceptable local tooling, but NeoForge will not host the initial Nexolith loader or runtime.
 
 NeoForge-specific dependencies belong in a dedicated platform module. Nexolith's cubic runtime, storage, world formats, scheduling, public API, and native mod lifecycle must remain in separate original modules with no NeoForge types in their public contracts.
 
